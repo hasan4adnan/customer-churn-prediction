@@ -1,5 +1,8 @@
 # 📊 Customer Churn Prediction with Logistic Regression  
-**End-to-End Machine Learning Project (Script-Based, No Notebooks)**
+
+<img width="2752" height="1536" alt="Gemini_Generated_Image_ejqruiejqruiejqr" src="https://github.com/user-attachments/assets/16c4d3a6-2740-4eb9-82c9-1812436ed10a" />
+
+**End-to-End Machine Learning Project**
 
 ---
 
