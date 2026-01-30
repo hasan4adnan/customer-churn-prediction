@@ -58,38 +58,29 @@ It includes:
 
 ## 🗂️ Project Structure
 
-customer_churn_project/
-│
-├── data/
-│ └── WA_Fn-UseC_-Telco-Customer-Churn.csv
-│
-├── reports/
-│ ├── eda_summary.md
-│ └── figures/
-│ ├── target_distribution.png
-│ ├── churn_by_contract.png
-│ ├── churn_by_paymentmethod.png
-│ ├── churn_vs_tenure.png
-│ ├── correlation_heatmap.png
-│ ├── roc_curve.png
-│ ├── confusion_matrix_threshold_0.63.png
-│ └── logistic_feature_importance.png
-│
-├── src/
-│ ├── config.py
-│ ├── data_loader.py
-│ ├── preprocessing.py
-│ ├── train.py
-│ ├── evaluate.py
-│ ├── main.py
-│ │
-│ └── eda/
-│ ├── eda_utils.py
-│ ├── eda_plots.py
-│ └── run_eda.py
-│
-├── requirements.txt
-└── README.md
+A concise, readable overview of the project layout:
+
+- 📁 **customer_churn_project/**
+  - 📁 **data/**
+    - `WA_Fn-UseC_-Telco-Customer-Churn.csv` — source dataset
+  - 📁 **reports/**
+    - `eda_summary.md` — written EDA findings
+    - 📁 **figures/** — generated visual assets
+      - `target_distribution.png` — target class counts
+      - `churn_by_contract.png` — churn rate by contract type
+      - `churn_by_paymentmethod.png` — churn by payment method
+      - `churn_vs_tenure.png` — tenure distribution by churn
+      - `correlation_heatmap.png` — feature correlations
+      - `roc_curve.png` — ROC curve from evaluation
+      - `confusion_matrix_threshold_0.63.png` — confusion matrix (best threshold)
+      - `logistic_feature_importance.png` — model coefficient importance
+  - 📁 **src/**
+    - `config.py`, `data_loader.py`, `preprocessing.py` — core pipeline
+    - `train.py`, `evaluate.py`, `main.py` — modelling & orchestration
+    - 📁 **eda/** — EDA helpers & plotting
+      - `eda_utils.py`, `eda_plots.py`, `run_eda.py`
+  - `requirements.txt` — dependencies
+  - `README.md` — project README
 
 ---
 
@@ -147,17 +138,34 @@ EDA was conducted as a decision-driven analysis, not random plotting.
 
 📌 These insights directly influenced preprocessing and metric selection.
 
-**Key EDA Visuals:**  
-<p align="center">
-  <img src="reports/figures/target_distribution.png" alt="Target distribution" width="280" />
-  <img src="reports/figures/churn_by_contract.png" alt="Churn by contract" width="280" />
-  <img src="reports/figures/churn_by_paymentmethod.png" alt="Churn by payment method" width="280" />
-</p>
+**Key EDA Visuals:**
 
-<p align="center">
-  <img src="reports/figures/churn_vs_tenure.png" alt="Churn vs tenure" width="420" />
-  <img src="reports/figures/correlation_heatmap.png" alt="Correlation heatmap" width="420" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="reports/figures/target_distribution.png" alt="Target distribution" width="280" /><br/>
+      <em>Target distribution — No vs Yes</em>
+    </td>
+    <td align="center">
+      <img src="reports/figures/churn_by_contract.png" alt="Churn by contract" width="280" /><br/>
+      <em>Churn rate by Contract</em>
+    </td>
+    <td align="center">
+      <img src="reports/figures/churn_by_paymentmethod.png" alt="Churn by payment method" width="280" /><br/>
+      <em>Churn rate by Payment Method</em>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="reports/figures/churn_vs_tenure.png" alt="Churn vs tenure" width="520" /><br/>
+      <em>Tenure comparison by churn</em>
+    </td>
+    <td align="center">
+      <img src="reports/figures/correlation_heatmap.png" alt="Correlation heatmap" width="280" /><br/>
+      <em>Correlation heatmap (feature relationships)</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -222,15 +230,26 @@ Generated automatically:
 - ✅ ROC Curve
 - ✅ Logistic Regression Feature Importance
 
-**Model Visuals:**  
-<p align="center">
-  <img src="reports/figures/confusion_matrix_threshold_0.63.png" alt="Confusion matrix" width="420" />
-  <img src="reports/figures/roc_curve.png" alt="ROC curve" width="420" />
-</p>
+**Model Visuals:**
 
-<p align="center">
-  <img src="reports/figures/logistic_feature_importance.png" alt="Feature importance" width="820" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="reports/figures/confusion_matrix_threshold_0.63.png" alt="Confusion matrix" width="420" /><br/>
+      <em>Confusion matrix (threshold ≈ 0.63)</em>
+    </td>
+    <td align="center">
+      <img src="reports/figures/roc_curve.png" alt="ROC curve" width="420" /><br/>
+      <em>ROC Curve (AUC ≈ 0.835)</em>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="reports/figures/logistic_feature_importance.png" alt="Feature importance" width="820" /><br/>
+      <em>Logistic regression feature importance (coefficients)</em>
+    </td>
+  </tr>
+</table>
 
 These visuals make the model:
 - Interpretable
