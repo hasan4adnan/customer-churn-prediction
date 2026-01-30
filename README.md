@@ -290,7 +290,6 @@ This project intentionally avoids notebooks to demonstrate:
 
 ## 👤 Author
 
-Hasan Adnan
-Software Engineer 
+Hasan Adnan - AWS Solutions Architect & Software Engineer 
 
 Feel free to connect and discuss improvements 🚀
